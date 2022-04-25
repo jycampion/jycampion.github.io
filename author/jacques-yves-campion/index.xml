@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jacques-Yves Campion</title>
+    <link>https://jycampion.github.io/author/jacques-yves-campion/</link>
+      <atom:link href="https://jycampion.github.io/author/jacques-yves-campion/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jacques-Yves Campion</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 08:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
+      <title>Jacques-Yves Campion</title>
+      <link>https://jycampion.github.io/author/jacques-yves-campion/</link>
+    </image>
+    
+    <item>
+      <title>Introduction to AI applied to 3D neuroimaging medical field</title>
+      <link>https://jycampion.github.io/talk/2020_december_imi/</link>
+      <pubDate>Tue, 01 Dec 2020 08:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/talk/2020_december_imi/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
