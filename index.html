@@ -241,6 +241,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-226958931-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-226958931-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -281,7 +319,7 @@
   <meta property="og:description" content="MD-PhD Student, Permanent staff IMoTheP team Institute Fresnel"><meta property="og:image" content="https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-12-01T08:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2022-01-01T00:00:00&#43;00:00">
   
 
   
@@ -861,19 +899,21 @@
     
     <h1>Biography</h1>
 
-    <p>Currently, MD-PhD (Neurosciences) student in Aix Marseille University. I&rsquo;m working on Neuroimaging, neuroinformatics and Machine and Deep Learning as researcher. I recently worked on neurological chronic symptoms and imaging aspects of Sars-Cov-2.</p>
+    <p>Medical student at the University of Tours. I work on neuroimaging, neuroinformatics and Machine and Deep Learning. I recently worked on neuroimaging as part of the Long COVID. 
+My PhD in neuroscience will investigate a new way to train an AI classifier for better neurological and psychiatric diagnosis based on neuroimaging. We will first test a new preprocessing with a surface, multimodality and projection approach. Then, we will test GNN solutions with graph representations.</p>
 <p>Using many tools :</p>
 <ul>
 <li>Clinica, AramisLab</li>
 <li>Freesurfer 6</li>
 <li>R,  Python</li>
 <li>TensorFlow, Pytorch</li>
+<li>Pytorch Geometric</li>
 </ul>
 <p>Also skilled as web developper using :</p>
 <ul>
-<li>Heroku, Azure, AWS and OVH</li>
-<li>Github, Bitbucket, Gitlab</li>
-<li>VueJS, JQuery, MDB</li>
+<li>Azure, OVH</li>
+<li>Github</li>
+<li>VueJS, JQuery</li>
 <li>Bootstrap, Element</li>
 <li>PHP, Laravel, SailsJS</li>
 <li>Wordpress, Drupal, Prestashop</li>
@@ -887,11 +927,15 @@
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
+          
+          <li>Deep Learning</li>
+          
+          <li>Graph neural network</li>
           
           <li>Neuroimaging</li>
           
-          <li>Pathology</li>
+          <li>Psychiatry</li>
           
           <li>Web development</li>
           
@@ -903,6 +947,22 @@
       <div class="col-md-7">
         <h3>Education</h3>
         <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Psychiatry Resident, 2026</p>
+              <p class="institution">Tours University</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">DFASM, 2021</p>
+              <p class="institution">Aix-Marseille University</p>
+            </div>
+          </li>
           
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
@@ -1008,7 +1068,7 @@
     <div class="featurette-icon"><i class="fab fa-python"></i></div>
     
     <h3>Python</h3>
-    <p>80%</p>
+    <p>100%</p>
   </div>
   
   
@@ -1021,7 +1081,7 @@
     <div class="featurette-icon"><i class="fas fa-chart-area"></i></div>
     
     <h3>Statistics</h3>
-    <p>100%</p>
+    <p>90%</p>
   </div>
   
   
@@ -1034,7 +1094,7 @@
     <div class="featurette-icon"><i class="fab fa-js"></i></div>
     
     <h3>JS</h3>
-    <p>75%</p>
+    <p>60%</p>
   </div>
   
   
@@ -1060,7 +1120,7 @@
     <div class="featurette-icon"><i class="fab fa-git"></i></div>
     
     <h3>Git</h3>
-    <p>90%</p>
+    <p>80%</p>
   </div>
   
   
@@ -1086,7 +1146,7 @@
     <div class="featurette-icon"><i class="fab fa-drupal"></i></div>
     
     <h3>Drupal</h3>
-    <p>100%</p>
+    <p>80%</p>
   </div>
   
   
@@ -1222,6 +1282,115 @@
           <div class="col">&nbsp;</div>
         </div>
         <div class="m-2">
+          <span class="badge badge-pill border exp-fill">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Psychiatric Resident</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://www.chu-tours.fr/" target="_blank" rel="noopener">CHRU Tours &amp; Tours University</a></h4>
+            <div class="text-muted exp-meta">
+              Nov 2021 –
+              
+                Present
+              
+              
+                <span class="middot-divider"></span>
+                <span>Tours</span>
+              
+            </div>
+            <div class="card-text"><p>Interships</p>
+<ul>
+<li>Psychiatry emergency</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Dev consultant</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="http://sequoiasante.com/" target="_blank" rel="noopener">Séquoia Santé + The Mind FullnessFamily + Pan Europe France + Pan Europe PACA</a></h4>
+            <div class="text-muted exp-meta">
+              Nov 2021 –
+              
+                Jan 2021
+              
+              
+            </div>
+            <div class="card-text">Website dev and Tech consulting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Dev consultant</h4>
+            <h4 class="card-title exp-company text-muted my-0">NeuroCov</h4>
+            <div class="text-muted exp-meta">
+              Apr 2020 –
+              
+                Sep 2020
+              
+              
+            </div>
+            <div class="card-text">Community platform designed for Marseille Neurologists describing COVID impairments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
           <span class="badge badge-pill border ">&nbsp;</span>
         </div>
         <div class="row h-50">
@@ -1299,10 +1468,44 @@ Tech consulting</div>
           <div class="col">&nbsp;</div>
         </div>
         <div class="m-2">
-          <span class="badge badge-pill border exp-fill">&nbsp;</span>
+          <span class="badge badge-pill border ">&nbsp;</span>
         </div>
         <div class="row h-50">
-          <div class="col ">&nbsp;</div>
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">President</h4>
+            <h4 class="card-title exp-company text-muted my-0">InnCog</h4>
+            <div class="text-muted exp-meta">
+              Apr 2019 –
+              
+                Sep 2021
+              
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
           <div class="col">&nbsp;</div>
         </div>
       </div>
@@ -1315,7 +1518,7 @@ Tech consulting</div>
             <div class="text-muted exp-meta">
               Sep 2018 –
               
-                Present
+                Sep 2021
               
               
                 <span class="middot-divider"></span>
@@ -1332,6 +1535,40 @@ Tech consulting</div>
 <li>Méditerranée Infection Foundation (8 weeks)</li>
 </ul>
 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col ">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Vice president</h4>
+            <h4 class="card-title exp-company text-muted my-0">Bureau Lycéen des Technologies Informatiques du Lycée Dumont d&rsquo;Urville</h4>
+            <div class="text-muted exp-meta">
+              Jan 2013 –
+              
+                Jan 2014
+              
+              
+            </div>
+            
           </div>
         </div>
       </div>
@@ -1520,398 +1757,6 @@ Tech consulting</div>
   
   
 
-  <section id="posts" class="home-section wg-pages   "  >
-    <div class="container">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-<div class="row ">
-  
-    
-      <div class="col-12 col-lg-4 section-heading">
-        <h1>Recent Posts</h1>
-        
-      </div>
-    
-  
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-
-    
-    
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
-  <section id="projects" class="home-section wg-portfolio   "  >
-    <div class="container">
-      
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-
-    <h1>Projects</h1>
-    
-
-  </div>
-  <div class="col-12 col-lg-8">
-
-
-
-    
-
-    
-
-    <div class="isotope projects-container js-layout-masonry ">
-      
-    </div>
-
-  </div>
-</div>
-
-    </div>
-  </section>
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
-  <section id="talks" class="home-section wg-pages   "  >
-    <div class="container">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-<div class="row ">
-  
-    
-      <div class="col-12 col-lg-4 section-heading">
-        <h1>Recent &amp; Upcoming Talks</h1>
-        
-      </div>
-    
-  
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-      
-        
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="card-simple">
-
-  
-  <div class="article-metadata">
-    
-    <div>
-      
-
-  
-  <span >Jacques-Yves Campion</span>
-    </div>
-    
-    <span>
-      Dec 1, 2020
-    </span>
-    
-    <span class="middot-divider"></span>
-    <span>Saint Gerôme Faculty, Aix-Marseille University</span>
-    
-  </div>
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3">
-    <a href="/talk/2020_december_imi/">Introduction to AI applied to 3D neuroimaging medical field</a>
-  </h3>
-
-  
-  <a href="/talk/2020_december_imi/" class="summary-link">
-    <div class="article-style">
-      <p>In coming</p>
-    </div>
-  </a>
-  
-
-  
-  <div class="btn-links">
-    
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-
-  
-
-
-
-
-
-
-  </div>
-  
-
-</div>
-
-      
-    
-
-    
-    
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
   <section id="featured" class="home-section wg-featured   "  >
     <div class="container">
       
@@ -1955,6 +1800,126 @@ Tech consulting</div>
 
     
 
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span >E Guedj</span>, <span >JY Campion</span>, <span >P Dudouet</span>, <span >E Kaphan</span>, <span >F Bregeon</span>, <span >H Tissot-Dupont</span>, <span >S Guis</span>, <span >F Barthelemy</span>, <span >P Habert</span>, <span >M Ceccaldi</span>, <span > others</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    January 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      <em>European journal of nuclear medicine and molecular imaging</em>
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/publication/guedj-202118/">18 F-FDG brain PET hypometabolism in patients with long COVID</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-202118/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
     
 
   
@@ -2070,9 +2035,469 @@ Tech consulting</div>
 
 
     
+      
+        
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/guedj-2022-impact/" >The impact of COVID-19 lockdown on brain metabolism</a>
+    </h3>
+
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span >Eric Guedj</span>, <span >Jacques-Yves Campion</span>, <span >Tatiana Horowitz</span>, <span >Fanny Barthelemy</span>, <span >Serge Cammilleri</span>, <span >Mathieu Ceccaldi</span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-2022-impact/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/guedj-202118/" >18 F-FDG brain PET hypometabolism in patients with long COVID</a>
+    </h3>
+
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span >E Guedj</span>, <span >JY Campion</span>, <span >P Dudouet</span>, <span >E Kaphan</span>, <span >F Bregeon</span>, <span >H Tissot-Dupont</span>, <span >S Guis</span>, <span >F Barthelemy</span>, <span >P Habert</span>, <span >M Ceccaldi</span>, <span > others</span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-202118/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/de-2021-decrease/" >Decrease in the cortex/striatum metabolic ratio on [18F]-FDG PET: a biomarker of autoimmune encephalitis</a>
+    </h3>
+
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span >Nicolas De Leiris</span>, <span >Berangère Ruel</span>, <span >Jean Vervandier</span>, <span >José Boucraut</span>, <span >Stephan Grimaldi</span>, <span >Tatiana Horowitz</span>, <span >Jean Pelletier</span>, <span >Frederique Fluchere</span>, <span >Jacques-Yves Campion</span>, <span >Elsa Kaphan</span>, <span > others</span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/de-2021-decrease/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/di-2021-fairembo/" >FairEmbo concept for arterial embolizations: in vivo feasibility and safety study with suture-based microparticles compared with microspheres</a>
+    </h3>
+
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span >Mathieu Di Bisceglie</span>, <span >Jean-Francois Hak</span>, <span >Abdoulaye Dione Diop</span>, <span >Gloria Salazar</span>, <span >Pauline Brige</span>, <span >Julien Panneau</span>, <span >Farouk Tradi</span>, <span >Paul Habert</span>, <span >Jacques-Yves Campion</span>, <span >Abdoulaye Ndoye Diop</span>, <span > others</span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/di-2021-fairembo/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/guedj-2021-early/" >From early limbic inflammation to long COVID sequelae: targetting the transition from brain PET hypermetabolism to hypometabolism</a>
+    </h3>
+
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span >E Guedj</span>, <span >S Morbelli</span>, <span >E Kaphan</span>, <span >JY Campion</span>, <span >P Dudouet</span>, <span >M Ceccaldi</span>, <span >S Cammilleri</span>, <span >F Nobili</span>, <span >C Eldin</span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-2021-early/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+      
+    
 
     
     
+    
+
+      
+      
+        
+      
+
+      
+
+      <div class="see-all">
+        <a href="/publication/">
+          See all publications
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </div>
     
 
   </div>
@@ -2147,28 +2572,6 @@ Tech consulting</div>
   <div class="col-12 col-lg-8">
     
 
-    
-
-      
-      
-      
-      
-      
-      
-
-      <div class="tag-cloud">
-        
-          
-          
-          
-          <a href="/tag/ai/" style="font-size:0.7rem">AI</a>
-        
-          
-          
-          
-          <a href="/tag/neuroimaging/" style="font-size:0.7rem">NeuroImaging</a>
-        
-      </div>
     
 
   </div>

@@ -241,6 +241,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-226958931-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-226958931-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -279,7 +317,7 @@
   <meta property="og:description" content="MD-PhD Student, Permanent staff IMoTheP team Institute Fresnel"><meta property="og:image" content="https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-12-01T08:00:00&#43;00:00">
+    
   
 
   
@@ -679,26 +717,6 @@
   
 
   
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tag/ai/" >AI</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tag/neuroimaging/" >NeuroImaging</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
   
 
   

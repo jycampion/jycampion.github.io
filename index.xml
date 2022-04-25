@@ -5,7 +5,7 @@
     <link>https://jycampion.github.io/</link>
       <atom:link href="https://jycampion.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Jacques-Yves Campion</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 08:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
       <title>Jacques-Yves Campion</title>
@@ -13,10 +13,66 @@
     </image>
     
     <item>
-      <title>Introduction to AI applied to 3D neuroimaging medical field</title>
-      <link>https://jycampion.github.io/talk/2020_december_imi/</link>
-      <pubDate>Tue, 01 Dec 2020 08:00:00 +0000</pubDate>
-      <guid>https://jycampion.github.io/talk/2020_december_imi/</guid>
+      <title>The impact of COVID-19 lockdown on brain metabolism</title>
+      <link>https://jycampion.github.io/publication/guedj-2022-impact/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/guedj-2022-impact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>18 F-FDG brain PET hypometabolism in patients with long COVID</title>
+      <link>https://jycampion.github.io/publication/guedj-202118/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/guedj-202118/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decrease in the cortex/striatum metabolic ratio on [18F]-FDG PET: a biomarker of autoimmune encephalitis</title>
+      <link>https://jycampion.github.io/publication/de-2021-decrease/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/de-2021-decrease/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FairEmbo concept for arterial embolizations: in vivo feasibility and safety study with suture-based microparticles compared with microspheres</title>
+      <link>https://jycampion.github.io/publication/di-2021-fairembo/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/di-2021-fairembo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From early limbic inflammation to long COVID sequelae: targetting the transition from brain PET hypermetabolism to hypometabolism</title>
+      <link>https://jycampion.github.io/publication/guedj-2021-early/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/guedj-2021-early/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peripheral Inflammation Is Associated With Brain SPECT Perfusion Changes in Schizophrenia</title>
+      <link>https://jycampion.github.io/publication/fond-2021-peripheral/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/fond-2021-peripheral/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Similar patterns of [18F]-FDG brain PET hypometabolism in paediatric and adult patients with long COVID: a paediatric case series</title>
+      <link>https://jycampion.github.io/publication/morand-2021-similar/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/morand-2021-similar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The pons as reference region for intensity normalization in semi-quantitative analysis of brain 18 FDG PET: application to metabolic changes related to ageing in conventional and digital control databases</title>
+      <link>https://jycampion.github.io/publication/verger-2021-pons/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/verger-2021-pons/</guid>
       <description></description>
     </item>
     

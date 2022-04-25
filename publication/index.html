@@ -241,6 +241,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-226958931-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-226958931-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -683,6 +721,30 @@
 
       
       
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
 
       <div class="form-row mb-4">
         <div class="col-auto">
@@ -694,6 +756,10 @@
             <option value="*">Type</option>
             
             
+            <option value=".pubtype-2">
+              Journal article
+            </option>
+            
           </select>
         </div>
         <div class="col-auto">
@@ -701,11 +767,548 @@
             <option value="*">Date</option>
             
             
+            
+            <option value=".year-2022">
+              2022
+            </option>
+            
+            <option value=".year-2021">
+              2021
+            </option>
+            
+            
           </select>
         </div>
       </div>
 
       <div id="container-publications">
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2022">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >Eric Guedj</span>, <span >Jacques-Yves Campion</span>, <span >Tatiana Horowitz</span>, <span >Fanny Barthelemy</span>, <span >Serge Cammilleri</span>, <span >Mathieu Ceccaldi</span>
+  </span>
+  (2022).
+  <a href="/publication/guedj-2022-impact/">The impact of COVID-19 lockdown on brain metabolism</a>.
+  <em>Human Brain Mapping</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-2022-impact/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >A Verger</span>, <span >M Doyen</span>, <span >JY Campion</span>, <span >Eric Guedj</span>
+  </span>
+  (2021).
+  <a href="/publication/verger-2021-pons/">The pons as reference region for intensity normalization in semi-quantitative analysis of brain 18 FDG PET: application to metabolic changes related to ageing in conventional and digital control databases</a>.
+  <em>EJNMMI research</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/verger-2021-pons/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >Aurelie Morand</span>, <span >Jacques-Yves Campion</span>, <span >Anne Lepine</span>, <span >Emmanuelle Bosdure</span>, <span >Léa Luciani</span>, <span >Serge Cammilleri</span>, <span >Brigitte Chabrol</span>, <span >Eric Guedj</span>
+  </span>
+  (2021).
+  <a href="/publication/morand-2021-similar/">Similar patterns of [18F]-FDG brain PET hypometabolism in paediatric and adult patients with long COVID: a paediatric case series</a>.
+  <em>European journal of nuclear medicine and molecular imaging</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/morand-2021-similar/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >Guillaume Fond</span>, <span >Alexandra GAROSI</span>, <span >Mélanie FAUGERE</span>, <span >Jacques-Yves Campion</span>, <span >Christophe LANCON</span>, <span >Laurent Boyer</span>, <span >Raphaelle RICHIERI</span>, <span >Eric Guedj</span>
+  </span>
+  (2021).
+  <a href="/publication/fond-2021-peripheral/">Peripheral Inflammation Is Associated With Brain SPECT Perfusion Changes in Schizophrenia</a>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/fond-2021-peripheral/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >E Guedj</span>, <span >S Morbelli</span>, <span >E Kaphan</span>, <span >JY Campion</span>, <span >P Dudouet</span>, <span >M Ceccaldi</span>, <span >S Cammilleri</span>, <span >F Nobili</span>, <span >C Eldin</span>
+  </span>
+  (2021).
+  <a href="/publication/guedj-2021-early/">From early limbic inflammation to long COVID sequelae: targetting the transition from brain PET hypermetabolism to hypometabolism</a>.
+  <em>European Journal of Nuclear Medicine and Molecular Imaging</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-2021-early/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >Mathieu Di Bisceglie</span>, <span >Jean-Francois Hak</span>, <span >Abdoulaye Dione Diop</span>, <span >Gloria Salazar</span>, <span >Pauline Brige</span>, <span >Julien Panneau</span>, <span >Farouk Tradi</span>, <span >Paul Habert</span>, <span >Jacques-Yves Campion</span>, <span >Abdoulaye Ndoye Diop</span>, <span > others</span>
+  </span>
+  (2021).
+  <a href="/publication/di-2021-fairembo/">FairEmbo concept for arterial embolizations: in vivo feasibility and safety study with suture-based microparticles compared with microspheres</a>.
+  <em>CardioVascular and Interventional Radiology</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/di-2021-fairembo/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >Nicolas De Leiris</span>, <span >Berangère Ruel</span>, <span >Jean Vervandier</span>, <span >José Boucraut</span>, <span >Stephan Grimaldi</span>, <span >Tatiana Horowitz</span>, <span >Jean Pelletier</span>, <span >Frederique Fluchere</span>, <span >Jacques-Yves Campion</span>, <span >Elsa Kaphan</span>, <span > others</span>
+  </span>
+  (2021).
+  <a href="/publication/de-2021-decrease/">Decrease in the cortex/striatum metabolic ratio on [18F]-FDG PET: a biomarker of autoimmune encephalitis</a>.
+  <em>European Journal of Nuclear Medicine and Molecular Imaging</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/de-2021-decrease/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  
+  <span >E Guedj</span>, <span >JY Campion</span>, <span >P Dudouet</span>, <span >E Kaphan</span>, <span >F Bregeon</span>, <span >H Tissot-Dupont</span>, <span >S Guis</span>, <span >F Barthelemy</span>, <span >P Habert</span>, <span >M Ceccaldi</span>, <span > others</span>
+  </span>
+  (2021).
+  <a href="/publication/guedj-202118/">18 F-FDG brain PET hypometabolism in patients with long COVID</a>.
+  <em>European journal of nuclear medicine and molecular imaging</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/guedj-202118/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
         
       </div>
 

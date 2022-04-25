@@ -2,26 +2,194 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jycampion.github.io/tag/ai/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <loc>https://jycampion.github.io/publication-type/2/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/authors/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
-    <loc>https://jycampion.github.io/talk/2020_december_imi/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <loc>https://jycampion.github.io/author/eric-guedj/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/fanny-barthelemy/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/author/jacques-yves-campion/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
-    <loc>https://jycampion.github.io/tag/neuroimaging/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <loc>https://jycampion.github.io/author/mathieu-ceccaldi/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
-    <loc>https://jycampion.github.io/tags/</loc>
-    <lastmod>2020-10-10T22:17:09+02:00</lastmod>
+    <loc>https://jycampion.github.io/publication_types/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/serge-cammilleri/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/tatiana-horowitz/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/guedj-2022-impact/</loc>
+    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/others/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/guedj-202118/</loc>
+    <lastmod>2022-02-03T14:33:56+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/a-verger/</loc>
+    <lastmod>2022-02-03T14:33:59+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/abdoulaye-dione-diop/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/abdoulaye-ndoye-diop/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/alexandra-garosi/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/anne-lepine/</loc>
+    <lastmod>2022-02-03T14:34:01+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/aurelie-morand/</loc>
+    <lastmod>2022-02-03T14:34:01+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/berangere-ruel/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/brigitte-chabrol/</loc>
+    <lastmod>2022-02-03T14:34:01+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/c-eldin/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/christophe-lancon/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/de-2021-decrease/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/e-guedj/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/e-kaphan/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/elsa-kaphan/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/emmanuelle-bosdure/</loc>
+    <lastmod>2022-02-03T14:34:01+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/f-barthelemy/</loc>
+    <lastmod>2022-02-03T14:33:56+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/f-bregeon/</loc>
+    <lastmod>2022-02-03T14:33:56+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/f-nobili/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/di-2021-fairembo/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/farouk-tradi/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/frederique-fluchere/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/guedj-2021-early/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/gloria-salazar/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/guillaume-fond/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/h-tissot-dupont/</loc>
+    <lastmod>2022-02-03T14:33:56+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/jean-pelletier/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/jean-vervandier/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/jean-francois-hak/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/jose-boucraut/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/julien-panneau/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/jy-campion/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/laurent-boyer/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/lea-luciani/</loc>
+    <lastmod>2022-02-03T14:34:01+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/m-ceccaldi/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/m-doyen/</loc>
+    <lastmod>2022-02-03T14:33:59+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/mathieu-di-bisceglie/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/melanie-faugere/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/nicolas-de-leiris/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/p-dudouet/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/p-habert/</loc>
+    <lastmod>2022-02-03T14:33:56+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/paul-habert/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/pauline-brige/</loc>
+    <lastmod>2022-02-03T14:33:55+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/fond-2021-peripheral/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/raphaelle-richieri/</loc>
+    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/s-cammilleri/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/s-guis/</loc>
+    <lastmod>2022-02-03T14:33:56+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/s-morbelli/</loc>
+    <lastmod>2022-02-03T14:34:00+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/morand-2021-similar/</loc>
+    <lastmod>2022-02-03T14:34:01+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/stephan-grimaldi/</loc>
+    <lastmod>2022-02-03T14:34:02+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication/verger-2021-pons/</loc>
+    <lastmod>2022-02-03T14:33:59+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/categories/</loc>
   </url><url>
@@ -31,12 +199,12 @@
     <loc>https://jycampion.github.io/post/</loc>
     <lastmod>2020-07-29T20:27:45+01:00</lastmod>
   </url><url>
-    <loc>https://jycampion.github.io/publication_types/</loc>
-  </url><url>
     <loc>https://jycampion.github.io/publication/</loc>
     <lastmod>2020-07-29T20:27:45+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/talk/</loc>
     <lastmod>2020-07-29T20:27:45+01:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tags/</loc>
   </url>
 </urlset>

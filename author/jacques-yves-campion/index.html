@@ -241,6 +241,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-226958931-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-226958931-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -790,19 +828,21 @@
     
     
 
-    <p>Currently, MD-PhD (Neurosciences) student in Aix Marseille University. I&rsquo;m working on Neuroimaging, neuroinformatics and Machine and Deep Learning as researcher. I recently worked on neurological chronic symptoms and imaging aspects of Sars-Cov-2.</p>
+    <p>Medical student at the University of Tours. I work on neuroimaging, neuroinformatics and Machine and Deep Learning. I recently worked on neuroimaging as part of the Long COVID. 
+My PhD in neuroscience will investigate a new way to train an AI classifier for better neurological and psychiatric diagnosis based on neuroimaging. We will first test a new preprocessing with a surface, multimodality and projection approach. Then, we will test GNN solutions with graph representations.</p>
 <p>Using many tools :</p>
 <ul>
 <li>Clinica, AramisLab</li>
 <li>Freesurfer 6</li>
 <li>R,  Python</li>
 <li>TensorFlow, Pytorch</li>
+<li>Pytorch Geometric</li>
 </ul>
 <p>Also skilled as web developper using :</p>
 <ul>
-<li>Heroku, Azure, AWS and OVH</li>
-<li>Github, Bitbucket, Gitlab</li>
-<li>VueJS, JQuery, MDB</li>
+<li>Azure, OVH</li>
+<li>Github</li>
+<li>VueJS, JQuery</li>
 <li>Bootstrap, Element</li>
 <li>PHP, Laravel, SailsJS</li>
 <li>Wordpress, Drupal, Prestashop</li>
@@ -816,11 +856,15 @@
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
+          
+          <li>Deep Learning</li>
+          
+          <li>Graph neural network</li>
           
           <li>Neuroimaging</li>
           
-          <li>Pathology</li>
+          <li>Psychiatry</li>
           
           <li>Web development</li>
           
@@ -832,6 +876,22 @@
       <div class="col-md-7">
         <h3>Education</h3>
         <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Psychiatry Resident, 2026</p>
+              <p class="institution">Tours University</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">DFASM, 2021</p>
+              <p class="institution">Aix-Marseille University</p>
+            </div>
+          </li>
           
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>

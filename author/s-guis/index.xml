@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>S Guis | Jacques-Yves Campion</title>
+    <link>https://jycampion.github.io/author/s-guis/</link>
+      <atom:link href="https://jycampion.github.io/author/s-guis/index.xml" rel="self" type="application/rss+xml" />
+    <description>S Guis</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
+      <title>S Guis</title>
+      <link>https://jycampion.github.io/author/s-guis/</link>
+    </image>
+    
+    <item>
+      <title>18 F-FDG brain PET hypometabolism in patients with long COVID</title>
+      <link>https://jycampion.github.io/publication/guedj-202118/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/guedj-202118/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

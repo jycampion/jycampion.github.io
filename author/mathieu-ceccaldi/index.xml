@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathieu Ceccaldi | Jacques-Yves Campion</title>
+    <link>https://jycampion.github.io/author/mathieu-ceccaldi/</link>
+      <atom:link href="https://jycampion.github.io/author/mathieu-ceccaldi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mathieu Ceccaldi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
+      <title>Mathieu Ceccaldi</title>
+      <link>https://jycampion.github.io/author/mathieu-ceccaldi/</link>
+    </image>
+    
+    <item>
+      <title>The impact of COVID-19 lockdown on brain metabolism</title>
+      <link>https://jycampion.github.io/publication/guedj-2022-impact/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/guedj-2022-impact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
