@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NeuroImaging | Jacques-Yves Campion</title>
+    <title>Neuroimaging | Jacques-Yves Campion</title>
     <link>https://jycampion.github.io/tag/neuroimaging/</link>
       <atom:link href="https://jycampion.github.io/tag/neuroimaging/index.xml" rel="self" type="application/rss+xml" />
-    <description>NeuroImaging</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 08:00:00 +0000</lastBuildDate>
+    <description>Neuroimaging</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
-      <title>NeuroImaging</title>
+      <title>Neuroimaging</title>
       <link>https://jycampion.github.io/tag/neuroimaging/</link>
     </image>
     
     <item>
-      <title>Introduction to AI applied to 3D neuroimaging medical field</title>
-      <link>https://jycampion.github.io/talk/2020_december_imi/</link>
-      <pubDate>Tue, 01 Dec 2020 08:00:00 +0000</pubDate>
-      <guid>https://jycampion.github.io/talk/2020_december_imi/</guid>
+      <title>Peripheral Inflammation Is Associated With Brain SPECT Perfusion Changes in Schizophrenia</title>
+      <link>https://jycampion.github.io/publication/fond-2021-peripheral/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jycampion.github.io/publication/fond-2021-peripheral/</guid>
       <description></description>
     </item>
     
