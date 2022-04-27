@@ -2,10 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jycampion.github.io/publication-type/2/</loc>
-    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
-  </url><url>
     <loc>https://jycampion.github.io/authors/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/biomarqueurs-dimagerie/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/e.-guedj/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/post/ms-neurosciences/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/irm/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/j-y.-campion/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/m.-ceccaldi/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/neurodegenerescence/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/neuropsychologie/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tags/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/tep-fdg/</loc>
+    <lastmod>2022-04-27T17:55:16+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/18f-pet/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/aging/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/clinica/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/freesurfer/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/k.-helmet/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/mri/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/neurology/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/project/project-phd/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/project/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/tag/psychiatry/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/author/t.-desmidt/</loc>
+    <lastmod>2022-04-27T17:54:44+02:00</lastmod>
+  </url><url>
+    <loc>https://jycampion.github.io/publication-type/2/</loc>
     <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/tag/brain-metabolism/</loc>
@@ -32,9 +98,6 @@
     <loc>https://jycampion.github.io/author/jacques-yves-campion/</loc>
     <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
-    <loc>https://jycampion.github.io/</loc>
-    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
-  </url><url>
     <loc>https://jycampion.github.io/tag/lockdown/</loc>
     <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
@@ -57,9 +120,6 @@
     <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/author/serge-cammilleri/</loc>
-    <lastmod>2022-02-03T14:34:04+01:00</lastmod>
-  </url><url>
-    <loc>https://jycampion.github.io/tags/</loc>
     <lastmod>2022-02-03T14:34:04+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/author/tatiana-horowitz/</loc>
@@ -295,9 +355,6 @@
   </url><url>
     <loc>https://jycampion.github.io/tag/pons/</loc>
     <lastmod>2022-02-03T14:33:59+01:00</lastmod>
-  </url><url>
-    <loc>https://jycampion.github.io/tag/psychiatry/</loc>
-    <lastmod>2022-02-03T14:33:57+01:00</lastmod>
   </url><url>
     <loc>https://jycampion.github.io/author/raphaelle-richieri/</loc>
     <lastmod>2022-02-03T14:33:57+01:00</lastmod>

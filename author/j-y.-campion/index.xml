@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J-Y. Campion | Jacques-Yves Campion</title>
+    <link>https://jycampion.github.io/author/j-y.-campion/</link>
+      <atom:link href="https://jycampion.github.io/author/j-y.-campion/index.xml" rel="self" type="application/rss+xml" />
+    <description>J-Y. Campion</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2022 17:55:16 +0200</lastBuildDate>
+    <image>
+      <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
+      <title>J-Y. Campion</title>
+      <link>https://jycampion.github.io/author/j-y.-campion/</link>
+    </image>
+    
+    <item>
+      <title>Etude des processus neurodégénératifs physiologiques du cortex cérébral en Imagerie par Résonance Magnétique et Tomographie par Emission de Positons au 18FluoroDesoxyGlucose et leurs corrélats cognitifs</title>
+      <link>https://jycampion.github.io/post/ms-neurosciences/</link>
+      <pubDate>Wed, 27 Apr 2022 17:55:16 +0200</pubDate>
+      <guid>https://jycampion.github.io/post/ms-neurosciences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neurosciences PhD</title>
+      <link>https://jycampion.github.io/project/project-phd/</link>
+      <pubDate>Wed, 27 Apr 2022 17:54:44 +0200</pubDate>
+      <guid>https://jycampion.github.io/project/project-phd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
