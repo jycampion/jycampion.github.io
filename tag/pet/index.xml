@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fatigue | Jacques-Yves Campion</title>
-    <link>https://jycampion.github.io/tag/fatigue/</link>
-      <atom:link href="https://jycampion.github.io/tag/fatigue/index.xml" rel="self" type="application/rss+xml" />
-    <description>Fatigue</description>
+    <title>PET | Jacques-Yves Campion</title>
+    <link>https://jycampion.github.io/tag/pet/</link>
+      <atom:link href="https://jycampion.github.io/tag/pet/index.xml" rel="self" type="application/rss+xml" />
+    <description>PET</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jycampion.github.io/images/icon_huba7c0fed642130bffbaedffc113956a3_25132_512x512_fill_lanczos_center_3.png</url>
-      <title>Fatigue</title>
-      <link>https://jycampion.github.io/tag/fatigue/</link>
+      <title>PET</title>
+      <link>https://jycampion.github.io/tag/pet/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>https://jycampion.github.io/publication/guedj-202118/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://jycampion.github.io/publication/guedj-202118/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Similar patterns of [18F]-FDG brain PET hypometabolism in paediatric and adult patients with long COVID: a paediatric case series</title>
-      <link>https://jycampion.github.io/publication/morand-2021-similar/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://jycampion.github.io/publication/morand-2021-similar/</guid>
       <description></description>
     </item>
     
