@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import { copy } from '../i18n/copy';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const c = copy[lang].cv;
+---
+<Base lang={lang} page="cv" title={copy[lang].meta.cv.title} description={copy[lang].meta.cv.description}>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>{c.heading}</h1>
+    </header>
+
+    <section class="row" aria-labelledby="h-tl">
+      <h2 class="row__label" id="h-tl">{c.timelineHeading}</h2>
+      <div class="row__body">
+        <ol class="tl">
+          {c.timeline.map((e) => (
+            <li>
+              <span class="tl__when sans">{e.when}</span>
+              <div>
+                <h3 class="tl__what">{e.what}</h3>
+                <p class="tl__where sans">{e.where}</p>
+                {e.detail && <p class="tl__detail">{e.detail}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-talks">
+      <h2 class="row__label" id="h-talks">{c.talksHeading}</h2>
+      <div class="row__body">
+        <ol class="tl">
+          {c.talks.map((e) => (
+            <li>
+              <span class="tl__when sans">{e.when}</span>
+              <div>
+                <h3 class="tl__what">{e.what}</h3>
+                <p class="tl__where sans">{e.where}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-training">
+      <h2 class="row__label" id="h-training">{c.trainingHeading}</h2>
+      <div class="row__body">
+        <ol class="tl">
+          {c.training.map((e) => (
+            <li>
+              <span class="tl__when sans">{e.when}</span>
+              <div>
+                <h3 class="tl__what">{e.what}</h3>
+                <p class="tl__where sans">{e.where}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-skills">
+      <h2 class="row__label" id="h-skills">{c.skillsHeading}</h2>
+      <div class="row__body">
+        <ul class="plain sans">{c.skills.map((s) => <li>{s}</li>)}</ul>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .tl { margin: 0; padding: 0; list-style: none; }
+  .tl li {
+    display: grid;
+    gap: 0.15rem 1.5rem;
+    padding-block: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+  .tl li:first-child { border-top: 0; padding-top: 0; }
+  @media (min-width: 640px) {
+    .tl li { grid-template-columns: 8rem minmax(0, 1fr); }
+  }
+  .tl__when { font-size: var(--fs-ui); color: var(--ink-2); font-variant-numeric: tabular-nums; padding-top: 0.15rem; }
+  .tl__what { font-size: var(--fs-body); font-weight: 500; line-height: 1.4; letter-spacing: 0; }
+  .tl__where { margin: 0.15rem 0 0; font-size: var(--fs-ui); color: var(--ink-2); }
+  .tl__detail { margin: 0.4rem 0 0; font-size: var(--fs-ui); max-width: 58ch; }
+  .plain { margin: 0; padding: 0; list-style: none; font-size: var(--fs-ui); line-height: 1.9; }
+</style>

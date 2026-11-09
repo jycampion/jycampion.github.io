@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base lang="fr" page="home" title="Page introuvable — Jacques-Yves Campion" description="Cette page n’existe pas ou a été déplacée.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Cette page n’existe plus ici</h1>
+      <p>Le site a été refondu en 2026 et certaines adresses ont changé.</p>
+      <p lang="en">This page has moved: the site was rebuilt in 2026 and some addresses changed.</p>
+    </header>
+    <p class="sans links404">
+      <a href="/">Accueil</a>
+      <a href="/publications/">Publications</a>
+      <a href="/recherche/">Recherche</a>
+      <a href="/en/" lang="en">English</a>
+    </p>
+  </div>
+</Base>
+
+<style>
+  .links404 { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-weight: 500; }
+</style>

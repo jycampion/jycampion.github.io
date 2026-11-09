@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { copy } from '../i18n/copy';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const c = copy[lang].clinical;
+---
+<Base lang={lang} page="clinical" title={copy[lang].meta.clinical.title} description={copy[lang].meta.clinical.description}>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>{c.heading}</h1>
+    </header>
+
+    <section class="row" aria-labelledby="h-cmrr">
+      <h2 class="row__label" id="h-cmrr">{lang === 'fr' ? 'CMRR, CHRU de Tours' : 'CMRR, Tours University Hospital'}</h2>
+      <div class="row__body">
+        {c.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-patients">
+      <h2 class="row__label" id="h-patients">{c.patientsHeading}</h2>
+      <div class="row__body">
+        <p class="notice">{c.patients}</p>
+        <a class="more" href="https://www.chu-tours.fr/">{c.patientsLink}</a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .notice {
+    padding: 1rem 1.25rem;
+    background: var(--paper-2);
+    border-radius: 4px;
+    font-family: var(--sans);
+    font-size: var(--fs-ui);
+    line-height: 1.55;
+  }
+</style>

@@ -1,0 +1,186 @@
+---
+import '../styles/global.css';
+import { ui, routes, profile, type Lang, type RouteKey } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  page: RouteKey;
+  title: string;
+  description: string;
+}
+const { lang, page, title, description } = Astro.props;
+const t = ui[lang];
+const other: Lang = lang === 'fr' ? 'en' : 'fr';
+const site = Astro.site!;
+const canonical = new URL(routes[page][lang], site).href;
+const alternate = new URL(routes[page][other], site).href;
+const navKeys: RouteKey[] = ['research', 'publications', 'clinical', 'cv'];
+const year = new Date().getFullYear();
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  honorificSuffix: profile.honorific,
+  jobTitle: t.role,
+  image: new URL(profile.photo, site).href,
+  url: new URL('/', site).href,
+  affiliation: [
+    { '@type': 'MedicalOrganization', name: 'CHRU de Tours — Centre Mémoire de Ressources et de Recherche' },
+    { '@type': 'ResearchOrganization', name: 'UMR 1253 iBraiN, Inserm – Université de Tours' },
+  ],
+  knowsAbout: ['Geriatric psychiatry', 'Neuroimaging', 'Deep learning', 'Brain age', 'Neurodegenerative diseases'],
+  sameAs: Object.values(profile.links),
+};
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang={other} href={alternate} />
+    <link rel="alternate" hreflang="x-default" href={new URL(routes[page].fr, site).href} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#10151b" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/images/jy-campion.jpg', site).href} />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_FR' : 'en_US'} />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+  </head>
+  <body>
+    <a class="skip" href="#contenu">{t.skip}</a>
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="brand" href={routes.home[lang]} aria-current={page === 'home' ? 'page' : undefined}>
+          {profile.name}
+        </a>
+        <nav aria-label={lang === 'fr' ? 'Navigation principale' : 'Main navigation'}>
+          <ul>
+            {navKeys.map((k) => (
+              <li>
+                <a href={routes[k][lang]} aria-current={page === k ? 'page' : undefined}>{t.nav[k]}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <a class="lang" href={routes[page][other]} hreflang={other} lang={other} title={t.switchLabel}>
+          <span aria-hidden="true">{t.switchShort}</span>
+          <span class="visually-hidden">{t.switchLabel}</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <div>
+          <p class="site-footer__name">{profile.name}, {profile.honorific}</p>
+          <p class="muted">{t.role}<br />CMRR, CHRU de Tours<br />UMR 1253 iBraiN, Inserm – Université de Tours</p>
+        </div>
+        <ul class="site-footer__links">
+          {profile.email && <li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>}
+          <li><a href={profile.links.scholar} rel="me">Google Scholar</a></li>
+          <li><a href={profile.links.github} rel="me">GitHub</a></li>
+          <li><a href={profile.links.linkedin} rel="me">LinkedIn</a></li>
+        </ul>
+        <p class="site-footer__note muted small">{t.footerNote} © {year}</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: var(--gutter);
+    top: -3rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    z-index: 10;
+  }
+  .skip:focus { top: 0.5rem; }
+  main:focus { outline: none; }
+
+  .site-header { font-family: var(--sans); }
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'brand lang' 'nav nav';
+    align-items: center;
+    gap: 0.6rem 1.5rem;
+    padding-block: 1.25rem;
+  }
+  .brand { grid-area: brand; }
+  .site-header nav { grid-area: nav; }
+  .lang { grid-area: lang; }
+  @media (min-width: 760px) {
+    .site-header__inner { grid-template-columns: 1fr auto auto; grid-template-areas: 'brand nav lang'; }
+  }
+  .brand {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--fs-ui);
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav a {
+    color: var(--ink-2);
+    text-decoration: none;
+    font-size: var(--fs-ui);
+    padding-block: 0.25rem;
+    border-bottom: 1.5px solid transparent;
+  }
+  nav a:hover { color: var(--ink); }
+  nav a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--accent); }
+  .lang {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: var(--fs-small);
+    font-weight: 600;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+  }
+  .lang:hover { border-color: var(--ink-2); }
+
+  .site-footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: var(--fs-ui);
+  }
+  .site-footer__inner {
+    display: grid;
+    gap: 1.5rem 2rem;
+    padding-block: 2.5rem 3rem;
+  }
+  .site-footer p { margin: 0; line-height: 1.5; }
+  .site-footer__name { font-weight: 600; }
+  .site-footer__links { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.35rem; align-content: start; }
+  @media (min-width: 900px) {
+    .site-footer__inner { grid-template-columns: 3fr 3fr 6fr; }
+    .site-footer__note { align-self: end; justify-self: end; text-align: right; }
+  }
+</style>

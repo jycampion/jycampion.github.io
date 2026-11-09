@@ -1,0 +1,184 @@
+# Publications — Jacques-Yves Campion
+# type : article | review | preprint | conference | thesis
+# axes : brainage | multimodal | worry | biomarkers | pet
+# selected: true  → apparaît sur la page d'accueil
+# Votre nom est mis en gras automatiquement s'il est écrit « Campion JY ».
+
+- id: srirambhatla-2026-autoencoder
+  title: Memory-efficient skip-connection-free 3D autoencoder for whole-brain MRI reconstruction
+  authors: [Srirambhatla R, Karim HT, Campion JY]
+  venue: AI4M3D Workshop, ECCV 2026
+  year: 2026
+  type: conference
+  axes: [brainage]
+  url: https://openreview.net/forum?id=w8H29tso9F
+  selected: true
+  note:
+    fr: Communication orale
+    en: Oral presentation
+
+- id: campion-2026-worry
+  title: Predicting worry mental states using long short-term memory (LSTM) recurrent deep neural networks
+  authors: [Campion JY, Desmidt T, Gross JJ, Tudorascu DL, Andreescu C, Karim HT]
+  venue: medRxiv
+  year: 2026
+  type: preprint
+  axes: [worry]
+  doi: 10.64898/2026.08.14.26360462
+  url: https://www.medrxiv.org/content/10.64898/2026.08.14.26360462v1
+  selected: true
+
+- id: srirambhatla-2026-t1t2
+  title: "Altered T1w/T2w-FLAIR ratio in white matter hyperintensities as an indicator of structural integrity loss: association with Alzheimer's disease and vascular dementia"
+  authors: [Srirambhatla R, Campion JY, Desmidt T, Pan Y, Andreescu C, Ferreira PCL, Povala G, Bellaver B, Ferrari-Souza JP, Leffa DT, Lussier FZ, Medeiros MS, Ruppert E, Rohden F, Hong CH, Roh HW, Park B, Choi JW, Seo SW, Choi SH, Moon SY, Kim EJ, Kim BC, An YS, Cho YH, Hong S, Karikari TK, Pascoal TA, Son SJ, Karim HT]
+  venue: medRxiv
+  year: 2026
+  type: preprint
+  axes: [biomarkers]
+  doi: 10.64898/2026.07.28.26359139
+  pmid: "42619937"
+  selected: true
+
+- id: gallet-2026-nfl
+  title: "Neurofilament light chain as a biomarker in geriatric psychiatry practice: a narrative review"
+  authors: [Gallet Q, Campion JY, Madieta L, Codron P, Guillet-Pichon V, Leroy V, Bulteau S, Serrand A, Robert G, Desmidt T, Gohier B, Gouju J]
+  venue: American Journal of Geriatric Psychiatry, 34(10), 1297–1311
+  year: 2026
+  type: review
+  axes: [biomarkers]
+  doi: 10.1016/j.jagp.2026.06.013
+  pmid: "42498564"
+  selected: true
+
+- id: guedj-2025-twitter
+  title: "Emotional stress during the COVID-19 lockdown: how negative X/Twitter posts correlated with changes in the brain's fear network"
+  authors: [Guedj E, Campion JY, Horowitz T, Barthélémy F, Khalfa S, El-Hage W]
+  venue: Frontiers in Nuclear Medicine, 5
+  year: 2025
+  type: article
+  axes: [pet]
+  doi: 10.3389/fnume.2025.1575026
+  pmid: "40557036"
+
+- id: couvreur-2024-pulsations
+  title: "Elevated brain pulsations in depression: insights from a pooled ultrasound cohort study"
+  authors: [Couvreur U, Gallet Q, Campion JY, Brizard B, Réméniéras JP, Gissot V, El-Hage W, Camus V, Gohier B, Desmidt T]
+  venue: Interface Focus, 14(6), 20240028
+  year: 2024
+  type: article
+  axes: [biomarkers]
+  doi: 10.1098/rsfs.2024.0028
+  pmid: "39649448"
+
+- id: horowitz-2024-longcovid
+  title: "Persistent brain metabolic impairment in long COVID patients with persistent clinical symptoms: a nine-month follow-up [18F]FDG-PET study"
+  authors: [Horowitz T, Dudouet P, Campion JY, Kaphan E, Radulesco T, Gonzalez S, Cammilleri S, Ménard A, Guedj E]
+  venue: European Journal of Nuclear Medicine and Molecular Imaging, 51(11), 3215–3222
+  year: 2024
+  type: article
+  axes: [pet]
+  doi: 10.1007/s00259-024-06775-x
+  pmid: "38862619"
+
+- id: gallet-2024-benzodiazepines
+  title: "Cerebral metabolic signature of chronic benzodiazepine use in nondemented older adults: an FDG-PET study in the MEMENTO cohort"
+  authors: [Gallet Q, Bouteloup V, Locatelli M, Habert MO, Chupin M, Campion JY, Michels PE, Delrieu J, Lebouvier T, Balageas AC, Surget A, Belzung C, Arlicot N, Ribeiro MS, Gissot V, El-Hage W, Camus V, Gohier B, Desmidt T]
+  venue: American Journal of Geriatric Psychiatry, 32(6), 665–677
+  year: 2024
+  type: article
+  axes: [biomarkers, pet]
+  doi: 10.1016/j.jagp.2023.10.002
+  pmid: "37973486"
+  selected: true
+
+- id: campion-2024-these
+  title: Identification d'un biomarqueur de neurodégénérescence par le calcul d'un biomarqueur de discordance entre la morphologie et le métabolisme cérébral
+  authors: [Campion JY]
+  venue: Thèse de doctorat en médecine (DES de psychiatrie), Université de Tours — dir. Pr Thomas Desmidt
+  year: 2024
+  type: thesis
+  axes: [multimodal]
+  url: http://memoires.scd.univ-tours.fr/Medecine/Theses/2024_Medecine_CampionJacquesYves.pdf
+  note:
+    fr: Soutenue le 5 septembre 2024
+    en: Defended on 5 September 2024
+
+- id: guedj-2022-lockdown
+  title: The impact of COVID-19 lockdown on brain metabolism
+  authors: [Guedj E, Campion JY, Horowitz T, Barthelemy F, Cammilleri S, Ceccaldi M]
+  venue: Human Brain Mapping, 43(2), 593–597
+  year: 2022
+  type: article
+  axes: [pet]
+  doi: 10.1002/hbm.25673
+  pmid: "34636103"
+
+- id: deleiris-2022-encephalitis
+  title: "Decrease in the cortex/striatum metabolic ratio on [18F]-FDG PET: a biomarker of autoimmune encephalitis"
+  authors: [De Leiris N, Ruel B, Vervandier J, Boucraut J, Grimaldi S, Horowitz T, Pelletier J, Fluchere F, Campion JY, Kaphan E, Guedj E]
+  venue: European Journal of Nuclear Medicine and Molecular Imaging, 49(3), 921–931
+  year: 2022
+  type: article
+  axes: [pet]
+  doi: 10.1007/s00259-021-05507-9
+  pmid: "34462791"
+
+- id: morand-2022-paediatric
+  title: "Similar patterns of [18F]-FDG brain PET hypometabolism in paediatric and adult patients with long COVID: a paediatric case series"
+  authors: [Morand A, Campion JY, Lepine A, Bosdure E, Luciani L, Cammilleri S, Chabrol B, Guedj E]
+  venue: European Journal of Nuclear Medicine and Molecular Imaging, 49(3), 913–920
+  year: 2022
+  type: article
+  axes: [pet]
+  doi: 10.1007/s00259-021-05528-4
+  pmid: "34414470"
+
+- id: fond-2022-schizophrenia
+  title: Peripheral inflammation is associated with brain SPECT perfusion changes in schizophrenia
+  authors: [Fond G, Garosi A, Faugere M, Campion JY, Lancon C, Boyer L, Richieri R, Guedj E]
+  venue: European Journal of Nuclear Medicine and Molecular Imaging, 49(3), 905–912
+  year: 2022
+  type: article
+  axes: [pet]
+  doi: 10.1007/s00259-021-05529-3
+  pmid: "34405275"
+
+- id: guedj-2021-limbic
+  title: From early limbic inflammation to long COVID sequelae
+  authors: [Guedj E, Morbelli S, Kaphan E, Campion JY, Dudouet P, Ceccaldi M, Cammilleri S, Nobili F, Eldin C]
+  venue: Brain, 144(8), e65
+  year: 2021
+  type: article
+  axes: [pet]
+  doi: 10.1093/brain/awab215
+  pmid: "34142116"
+
+- id: verger-2021-pons
+  title: "The pons as reference region for intensity normalization in semi-quantitative analysis of brain 18FDG PET: application to metabolic changes related to ageing in conventional and digital control databases"
+  authors: [Verger A, Doyen M, Campion JY, Guedj E]
+  venue: EJNMMI Research, 11(1), 31
+  year: 2021
+  type: article
+  axes: [pet, multimodal]
+  doi: 10.1186/s13550-021-00771-0
+  pmid: "33761019"
+
+- id: guedj-2021-longcovid
+  title: 18F-FDG brain PET hypometabolism in patients with long COVID
+  authors: [Guedj E, Campion JY, Dudouet P, Kaphan E, Bregeon F, Tissot-Dupont H, Guis S, Barthelemy F, Habert P, Ceccaldi M, Million M, Raoult D, Cammilleri S, Eldin C]
+  venue: European Journal of Nuclear Medicine and Molecular Imaging, 48(9), 2823–2833
+  year: 2021
+  type: article
+  axes: [pet]
+  doi: 10.1007/s00259-021-05215-4
+  pmid: "33501506"
+  selected: true
+
+- id: dibisceglie-2021-fairembo
+  title: "FairEmbo concept for arterial embolizations: in vivo feasibility and safety study with suture-based microparticles compared with microspheres"
+  authors: [Di Bisceglie M, Hak JF, Diop AD, Salazar G, Brige P, Panneau J, Tradi F, Habert P, Campion JY, Diop AN, Soulez G, Guillet B, Vidal V]
+  venue: CardioVascular and Interventional Radiology, 44(4), 625–632
+  year: 2021
+  type: article
+  doi: 10.1007/s00270-020-02678-0
+  pmid: "33099701"

@@ -1,0 +1,153 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SliceFigure from '../components/SliceFigure.astro';
+import PubList from '../components/PubList.astro';
+import { copy } from '../i18n/copy';
+import { ui, routes, profile, axes, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const c = copy[lang];
+const t = ui[lang];
+const selected = (await getCollection('publications')).filter((p) => p.data.selected);
+const mainAxes = c.research.axes.filter((a) => a.key !== 'pet');
+---
+<Base lang={lang} page="home" title={c.meta.home.title} description={c.meta.home.description}>
+  <section class="wrap hero">
+    <div class="hero__text">
+      <h1 class="hero__name">
+        <span>Jacques-Yves</span>
+        <span>Campion</span>
+      </h1>
+      <p class="hero__role sans">{t.role}<span class="muted">, {profile.honorific}</span></p>
+      <p class="hero__lede">{c.home.lede}</p>
+      <ul class="hero__aff sans">
+        {c.home.affiliations.map((a) => <li>{a}</li>)}
+      </ul>
+      <p class="hero__links sans">
+        <a href={routes.publications[lang]}>{t.nav.publications}</a>
+        <a href={profile.links.scholar}>Google Scholar</a>
+        <a href={profile.links.github}>GitHub</a>
+        <a href={profile.links.linkedin}>LinkedIn</a>
+      </p>
+    </div>
+    <div class="hero__figure">
+      <SliceFigure caption={c.home.figureCaption} />
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="row" aria-labelledby="h-axes">
+      <h2 class="row__label" id="h-axes">{c.home.sections.axes}</h2>
+      <div class="row__body row__body--wide">
+        <ul class="axes">
+          {mainAxes.map((a) => (
+            <li>
+              <h3><a href={`${routes.research[lang]}#${a.id}`}>{axes[a.key][lang]}</a></h3>
+              <p>{a.summary}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-pubs">
+      <h2 class="row__label" id="h-pubs">{c.home.sections.selected}</h2>
+      <div class="row__body">
+        <PubList pubs={selected} lang={lang} />
+        <a class="more" href={routes.publications[lang]}>{t.allPubs}</a>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-clin">
+      <h2 class="row__label" id="h-clin">{c.home.sections.clinical}</h2>
+      <div class="row__body">
+        <p>{c.home.clinical}</p>
+        <a class="more" href={routes.clinical[lang]}>{c.home.clinicalLink}</a>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-these">
+      <h2 class="row__label" id="h-these">{c.home.sections.thesis}</h2>
+      <div class="row__body">
+        <p class="thesis-title">{c.research.thesis.title}</p>
+        <p class="muted">{lang === 'fr' ? 'Thèse de neurosciences' : 'PhD in neuroscience'}, {c.home.thesisIntro}</p>
+        <a class="more" href={`${routes.research[lang]}#${lang === 'fr' ? 'these' : 'thesis'}`}>{c.home.researchLink}</a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    gap: 2.5rem;
+    padding-block: 2.5rem 3.5rem;
+    align-items: start;
+  }
+  .hero__name {
+    font-size: var(--fs-display);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    font-variation-settings: 'opsz' 72;
+  }
+  .hero__name span { display: block; }
+  .hero__role {
+    margin: 1.25rem 0 0;
+    font-size: var(--fs-h3);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .hero__lede {
+    margin: 1.5rem 0 0;
+    max-width: 38rem;
+    font-size: 1.1875rem;
+    line-height: 1.6;
+  }
+  .hero__aff {
+    margin: 1.75rem 0 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+    border-left: 2px solid var(--accent);
+    font-size: var(--fs-ui);
+    line-height: 1.55;
+    color: var(--ink-2);
+  }
+  .hero__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin: 1.75rem 0 0;
+    font-size: var(--fs-ui);
+    font-weight: 500;
+  }
+  .hero__figure { max-width: 380px; width: 100%; justify-self: center; }
+
+  @media (min-width: 900px) {
+    .hero {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: 4rem;
+      padding-block: 4rem 5rem;
+    }
+    .hero__figure { justify-self: end; margin-top: 0.5rem; }
+  }
+
+  .axes {
+    display: grid;
+    gap: 2rem 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 720px) {
+    .axes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  .axes h3 { font-size: var(--fs-h3); margin-bottom: 0.4rem; }
+  .axes h3 a { color: var(--ink); text-decoration: none; }
+  .axes h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .axes p { margin: 0; color: var(--ink-2); max-width: 44ch; }
+
+  .thesis-title { font-size: var(--fs-h3); line-height: 1.35; margin-bottom: 0.6rem; }
+</style>

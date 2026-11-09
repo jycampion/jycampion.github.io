@@ -1,0 +1,138 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  pubs: CollectionEntry<'publications'>[];
+  lang: Lang;
+  groupByYear?: boolean;
+  headingLevel?: 'h2' | 'h3';
+}
+const { pubs, lang, groupByYear = false, headingLevel = 'h3' } = Astro.props;
+const t = ui[lang];
+const ME = 'Campion JY';
+const Title = headingLevel;
+
+function authorParts(list: string[]) {
+  if (list.length <= 10) return list;
+  const me = list.indexOf(ME);
+  const head = list.slice(0, 3);
+  const out: string[] = [...head];
+  if (me > 2 && me < list.length - 1) out.push('…', ME);
+  out.push('…', list[list.length - 1]);
+  return out;
+}
+
+function linkLabel(url: string) {
+  const host = new URL(url).hostname;
+  if (host.includes('openreview')) return 'OpenReview';
+  if (host.includes('medrxiv')) return 'medRxiv';
+  if (url.endsWith('.pdf')) return 'PDF';
+  return lang === 'fr' ? 'Lien' : 'Link';
+}
+
+const sorted = [...pubs].sort((a, b) => b.data.year - a.data.year);
+---
+<ol class="pubs">
+  {sorted.map((p, i) => {
+    const d = p.data;
+    const firstOfYear = groupByYear && (i === 0 || sorted[i - 1].data.year !== d.year);
+    const parts = authorParts(d.authors);
+    return (
+      <li class="pub" data-type={d.type} data-year={d.year}>
+        {groupByYear && (
+          <span class:list={['pub__year', { 'pub__year--first': firstOfYear }]}>{d.year}</span>
+        )}
+        <div class="pub__body">
+          <Title class="pub__title">{d.title}</Title>
+          <p class="pub__authors">
+            {parts.map((a, k) => (
+              <>
+                {a === ME ? <strong>{a}</strong> : a}
+                {k < parts.length - 1 ? ', ' : ''}
+              </>
+            ))}
+            {d.authors.length > 10 && (
+              <span class="muted"> ({d.authors.length} {lang === 'fr' ? 'auteurs' : 'authors'})</span>
+            )}
+          </p>
+          <p class="pub__meta">
+            <span class="pub__venue">{d.venue}</span>
+            {!groupByYear && <span>, {d.year}</span>}
+            {d.type !== 'article' && <span class="pub__type">{t.pubTypeSingular[d.type]}</span>}
+            {d.note && <span class="pub__note">{d.note[lang]}</span>}
+          </p>
+          <p class="pub__links">
+            {d.doi && <a href={`https://doi.org/${d.doi}`}>DOI<span class="visually-hidden"> {d.doi}</span></a>}
+            {d.pmid && <a href={`https://pubmed.ncbi.nlm.nih.gov/${d.pmid}/`}>PubMed</a>}
+            {d.url && !(d.doi && d.url.includes('medrxiv')) && <a href={d.url}>{linkLabel(d.url)}</a>}
+            {d.pdf && <a href={d.pdf}>PDF</a>}
+            {d.code && <a href={d.code}>Code</a>}
+          </p>
+        </div>
+      </li>
+    );
+  })}
+</ol>
+
+<style>
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pub {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 1.1rem;
+  }
+  .pub + .pub { border-top: 1px solid var(--rule); }
+  .pub:first-child { padding-top: 0; }
+  .pub__title {
+    font-family: var(--serif);
+    font-size: var(--fs-body);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin: 0 0 0.35rem;
+    max-width: 62ch;
+  }
+  .pub__authors, .pub__meta, .pub__links {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: var(--fs-small);
+    line-height: 1.5;
+  }
+  .pub__authors { color: var(--ink-2); }
+  .pub__authors strong { color: var(--ink); font-weight: 600; }
+  .pub__meta { color: var(--ink); margin-top: 0.15rem; }
+  .pub__venue { font-style: italic; }
+  .pub__type, .pub__note {
+    display: inline-block;
+    margin-left: 0.6rem;
+    padding: 0 0.4rem;
+    border-radius: 3px;
+    background: var(--paper-2);
+    color: var(--ink-2);
+    font-size: 0.8125rem;
+  }
+  .pub__type { background: var(--accent-soft); color: var(--accent); }
+  .pub__links { display: flex; gap: 1rem; margin-top: 0.35rem; }
+  .pub__links:empty { display: none; }
+  .pub__links a { font-weight: 500; }
+
+  .pub__year {
+    font-family: var(--serif);
+    font-size: var(--fs-h2);
+    line-height: 1.2;
+    color: var(--ink-2);
+    font-variant-numeric: oldstyle-nums;
+  }
+  .pub__year:not(.pub__year--first) { display: none; }
+  .pub:has(.pub__year--first) { border-top-color: var(--ink-2); }
+  .pub[hidden] { display: none; }
+
+  @media (min-width: 900px) {
+    .pub:has(.pub__year) { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0 1.5rem; }
+    .pub__year:not(.pub__year--first) { display: block; visibility: hidden; }
+  }
+  @media (max-width: 899px) {
+    .pub__year--first { margin-bottom: 0.5rem; }
+  }
+</style>

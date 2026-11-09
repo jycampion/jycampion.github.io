@@ -1,0 +1,60 @@
+---
+import { buildSlice } from '../lib/slice';
+interface Props { caption: string }
+const { caption } = Astro.props;
+const s = buildSlice();
+---
+<figure class="slice">
+  <svg viewBox={s.viewBox} role="img" aria-labelledby="slice-cap" focusable="false">
+    <g class="slice__heat">
+      {s.heat.map((h, i) => (
+        <path d={h.d} fill={h.fill} stroke={h.fill} style={`--k:${h.level};--f:${(0.05 + i * 0.035).toFixed(3)}`} />
+      ))}
+    </g>
+    <g class="slice__lines" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+      <path class="l l1" d={s.pial} pathLength="1" />
+      <path class="l l2" d={s.white} pathLength="1" />
+      <path class="l l4" d={s.midline} pathLength="1" />
+      {s.ventricles.map((v) => <path class="l l5" d={v} pathLength="1" />)}
+    </g>
+  </svg>
+  <figcaption id="slice-cap">{caption}</figcaption>
+</figure>
+
+<style>
+  .slice { margin: 0; color: var(--ink); }
+  .slice svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .slice figcaption {
+    margin-top: 1rem;
+    font-family: var(--sans);
+    font-size: var(--fs-small);
+    line-height: 1.45;
+    color: var(--ink-2);
+    max-width: 34ch;
+  }
+  .l { vector-effect: non-scaling-stroke; }
+  .l1 { stroke-width: 1.6; }
+  .l2 { stroke-width: 1; opacity: 0.7; }
+  .l4 { stroke-width: 1; opacity: 0.7; }
+  .l5 { stroke-width: 1; opacity: 0.8; }
+  .slice__heat path { fill-opacity: var(--f); stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+
+  /* Un seul moment animé : le contour se dessine, puis la carte apparaît par niveaux */
+  @media (prefers-reduced-motion: no-preference) {
+    .l {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: draw 1.8s cubic-bezier(0.6, 0, 0.2, 1) forwards;
+    }
+    .l2 { animation-delay: 0.25s; }
+    .l4 { animation-delay: 0.6s; animation-duration: 0.9s; }
+    .l5 { animation-delay: 0.9s; animation-duration: 1s; }
+    .slice__heat path {
+      opacity: 0;
+      animation: heat 0.6s ease-out forwards;
+      animation-delay: calc(1.5s + var(--k) * 0.1s);
+    }
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes heat { to { opacity: 1; } }
+</style>

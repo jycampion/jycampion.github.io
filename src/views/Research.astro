@@ -1,0 +1,124 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { copy } from '../i18n/copy';
+import { axes, profile, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const c = copy[lang].research;
+const pubs = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
+const related = (key: string) => pubs.filter((p) => (p.data.axes as string[]).includes(key));
+const href = (p: (typeof pubs)[number]) =>
+  p.data.doi ? `https://doi.org/${p.data.doi}` : p.data.url ?? (p.data.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${p.data.pmid}/` : undefined);
+const thesisId = lang === 'fr' ? 'these' : 'thesis';
+---
+<Base lang={lang} page="research" title={copy[lang].meta.research.title} description={copy[lang].meta.research.description}>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>{c.heading}</h1>
+      <p>{c.intro}</p>
+    </header>
+
+    {c.axes.map((a) => {
+      const rel = related(a.key);
+      return (
+        <section class="row" id={a.id} aria-labelledby={`h-${a.id}`}>
+          <h2 class="row__label" id={`h-${a.id}`}>{axes[a.key][lang]}</h2>
+          <div class="row__body">
+            {a.body.map((para) => <p>{para}</p>)}
+            {a.status && <p class="status sans">{a.status}</p>}
+            {rel.length > 0 && (
+              <div class="related">
+                <h3 class="related__h sans">{c.relatedLabel}</h3>
+                <ul>
+                  {rel.map((p) => {
+                    const u = href(p);
+                    return (
+                      <li>
+                        {u ? <a href={u}>{p.data.title}</a> : p.data.title}
+                        <span class="muted">, {p.data.venue.split(',')[0]}, {p.data.year}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    })}
+
+    <section class="row" id={thesisId} aria-labelledby="h-thesis">
+      <h2 class="row__label" id="h-thesis">{c.thesis.heading}</h2>
+      <div class="row__body">
+        <p class="thesis-title">{c.thesis.title}</p>
+        <dl class="facts sans">
+          {c.thesis.facts.map(([k, v]) => (
+            <div><dt>{k}</dt><dd>{v}</dd></div>
+          ))}
+        </dl>
+        <p>{c.thesis.summary}</p>
+        <a class="more" href={profile.links.thesesfr}>{c.thesis.link}</a>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-collab">
+      <h2 class="row__label" id="h-collab">{c.collaborations.heading}</h2>
+      <div class="row__body">
+        <dl class="facts facts--stack sans">
+          {c.collaborations.items.map(([k, v]) => (
+            <div><dt>{k}</dt><dd>{v}</dd></div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-methods">
+      <h2 class="row__label" id="h-methods">{c.methods.heading}</h2>
+      <div class="row__body">
+        <ul class="plain sans">{c.methods.items.map((m) => <li>{m}</li>)}</ul>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .row { scroll-margin-top: 1rem; }
+  .status {
+    display: inline-block;
+    margin: 0.25rem 0 0;
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: var(--fs-small);
+    font-weight: 500;
+  }
+  .related { margin-top: 1.5rem; }
+  .related__h { font-size: var(--fs-small); font-weight: 600; color: var(--ink-2); margin-bottom: 0.5rem; letter-spacing: 0; }
+  .related ul { margin: 0; padding: 0; list-style: none; }
+  .related li {
+    font-size: var(--fs-ui);
+    line-height: 1.45;
+    padding: 0.45rem 0 0.45rem 0.9rem;
+    border-left: 1px solid var(--rule);
+  }
+  .related a { color: var(--ink); text-decoration-color: var(--rule); }
+  .related a:hover { color: var(--accent); text-decoration-color: currentColor; }
+  .related li .muted { font-family: var(--sans); font-size: var(--fs-small); }
+
+  .thesis-title { font-size: var(--fs-h3); line-height: 1.35; margin-bottom: 1.25rem; }
+  .facts { margin: 0 0 1.5rem; font-size: var(--fs-ui); line-height: 1.45; }
+  .facts div { display: grid; gap: 0.1rem 1.25rem; padding-block: 0.5rem; border-top: 1px solid var(--rule); }
+  .facts div:last-child { border-bottom: 1px solid var(--rule); }
+  .facts dt { color: var(--ink-2); }
+  .facts dd { margin: 0; }
+  @media (min-width: 640px) {
+    .facts div { grid-template-columns: 9.5rem minmax(0, 1fr); }
+    .facts--stack div { grid-template-columns: 13rem minmax(0, 1fr); }
+  }
+  .facts--stack dt { color: var(--ink); font-weight: 600; }
+  .facts--stack dd { color: var(--ink-2); }
+  .plain { margin: 0; padding: 0; list-style: none; font-size: var(--fs-ui); line-height: 1.9; }
+</style>
